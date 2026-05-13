@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abstracionismo Americano & Pop Art</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- PROGRESS BAR -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- SLIDE COUNTER -->
+  <div class="slide-counter" id="slideCounter">01 / 12</div>
+
+  <!-- NAVIGATION ARROWS -->
+  <button class="nav-btn nav-prev" id="prevBtn" aria-label="Slide anterior">&#8592;</button>
+  <button class="nav-btn nav-next" id="nextBtn" aria-label="Próximo slide">&#8594;</button>
+
+  <!-- SLIDES CONTAINER -->
+  <div class="slides-container" id="slidesContainer">
+
+    <!-- SLIDE 1: CAPA -->
+    <section class="slide slide-cover active" data-index="0">
+      <div class="cover-bg">
+        <div class="paint-splash splash-1"></div>
+        <div class="paint-splash splash-2"></div>
+        <div class="paint-splash splash-3"></div>
+        <div class="dot-grid-pop"></div>
+      </div>
+      <div class="cover-content">
+        <div class="cover-badge">Arte Contemporânea</div>
+        <h1 class="cover-title">
+          <span class="title-line-1">Abstracionismo</span>
+          <span class="title-line-2">Americano</span>
+          <span class="title-divider">&</span>
+          <span class="title-line-3">Pop Art</span>
+        </h1>
+        <p class="cover-subtitle">Dois movimentos que transformaram a arte moderna</p>
+        <div class="cover-meta">
+          <span class="meta-name">Alunos(a): EMANUEL FELIPE FERREIRA GOMES, MAVYLLA REBECA FERREIRA DA SILVA, MARIA CECILIA DA SILVA ALVES, ARTHUR ARNLADO VASCONCELOS e ELIAQUIM VICTOR DA SILVA PINTO</span>
+          <span class="meta-sep">·</span>
+          <span class="meta-date" id="coverDate"></span>
+        </div>
+      </div>
+      <div class="cover-stripe"></div>
+    </section>
+
+    <!-- SLIDE 2: ORIGEM E CONTEXTO -->
+    <section class="slide slide-abstract-dark" data-index="1">
+      <div class="slide-texture"></div>
+      <div class="slide-layout-split">
+        <div class="split-left">
+          <div class="slide-tag">02</div>
+          <h2 class="slide-title">Origem & Contexto Histórico</h2>
+          <p class="slide-intro">Dois movimentos nascidos em épocas distintas, respondendo ao seu tempo de maneiras opostas.</p>
+        </div>
+        <div class="split-right">
+          <div class="timeline-block abstract-block">
+            <div class="timeline-year">1940s</div>
+            <h3>Abstracionismo Americano</h3>
+            <ul>
+              <li>Surgiu nos EUA após a Segunda Guerra Mundial</li>
+              <li>Nova York tornou-se o novo centro artístico mundial</li>
+              <li>Reação ao trauma da guerra e ao racionalismo europeu</li>
+              <li>Influência do surrealismo e da psicanálise</li>
+            </ul>
+          </div>
+          <div class="timeline-block pop-block">
+            <div class="timeline-year">1950–60s</div>
+            <h3>Pop Art</h3>
+            <ul>
+              <li>Nasceu na Inglaterra e explodiu nos EUA</li>
+              <li>Crescimento da publicidade e da televisão</li>
+              <li>Era do consumo em massa e da cultura popular</li>
+              <li>Arte como resposta irônica à sociedade de consumo</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: COMPARAÇÃO -->
+    <section class="slide slide-compare" data-index="2">
+      <div class="slide-layout-full">
+        <div class="slide-tag light">03</div>
+        <h2 class="slide-title light">Comparação Entre os Movimentos</h2>
+        <div class="compare-table-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th class="th-aspect">Aspecto</th>
+                <th class="th-abstract">Abstracionismo Americano</th>
+                <th class="th-pop">Pop Art</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Tema central</td><td>Emoção e subjetividade</td><td>Cultura de consumo e mídia</td></tr>
+              <tr><td>Estética</td><td>Abstrata, gestual, livre</td><td>Figurativa, clara, colorida</td></tr>
+              <tr><td>Tom</td><td>Sério e introspectivo</td><td>Irônico e provocador</td></tr>
+              <tr><td>Influência</td><td>Surrealismo, psicanálise</td><td>Publicidade, quadrinhos, TV</td></tr>
+              <tr><td>Técnica</td><td>Dripping, pinceladas livres</td><td>Serigrafia, impressão, colagem</td></tr>
+              <tr><td>Paleta</td><td>Tons terrosos, sombrios</td><td>Cores primárias vibrantes</td></tr>
+              <tr><td>Artistas</td><td>Pollock, Rothko, De Kooning</td><td>Warhol, Lichtenstein</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: CARACTERÍSTICAS DO EXPRESSIONISMO -->
+    <section class="slide slide-abstract-warm" data-index="3">
+      <div class="abstract-bg-drip"></div>
+      <div class="slide-layout-card">
+        <div class="slide-tag">04</div>
+        <h2 class="slide-title">Características do<br/>Abstracionismo Americano</h2>
+        <div class="cards-grid">
+          <div class="feat-card">
+            <h4>Formas Livres</h4>
+            <p>Sem formas definidas ou figurativas — pura abstração visual</p>
+          </div>
+          <div class="feat-card">
+            <h4>Emoção Intensa</h4>
+            <p>A obra expressa estados internos, angústia e liberdade</p>
+          </div>
+          <div class="feat-card">
+            <h4>Grandes Telas</h4>
+            <p>Formatos monumentais para envolver o espectador fisicamente</p>
+          </div>
+          <div class="feat-card">
+            <h4>Espontaneidade</h4>
+            <p>O processo criativo é tão importante quanto o resultado final</p>
+          </div>
+          <div class="feat-card">
+            <h4>Camadas de Tinta</h4>
+            <p>Sobreposição de tintas criando texturas densas e profundas</p>
+          </div>
+          <div class="feat-card">
+            <h4>Liberdade Total</h4>
+            <p>Rejeição das regras acadêmicas e convenções tradicionais</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: TÉCNICAS -->
+    <section class="slide slide-technique" data-index="4">
+      <div class="slide-layout-full">
+        <div class="slide-tag">05</div>
+        <h2 class="slide-title">Técnicas & Estilos</h2>
+        <p class="slide-intro">O corpo como instrumento, a tela como campo de batalha emocional.</p>
+        <div class="tech-grid">
+          <div class="tech-card">
+            <div class="tech-card-img">
+              <img src="assets/dripping.png" alt="Dripping" />
+            </div>
+            <div class="tech-card-body">
+              <span class="tech-num">01</span>
+              <h4>Dripping</h4>
+              <p>Técnica de respingos de tinta popularizada por Jackson Pollock. Pintura derramada sobre tela no chão.</p>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-card-img">
+              <img src="assets/pincelada-forte.png" alt="Pinceladas Fortes" />
+            </div>
+            <div class="tech-card-body">
+              <span class="tech-num">02</span>
+              <h4>Pinceladas Fortes</h4>
+              <p>Gestos amplos e enérgicos que revelam a intensidade emocional do artista no ato criativo.</p>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-card-img">
+              <img src="assets/action-painting.png" alt="Action Painting" />
+            </div>
+            <div class="tech-card-body">
+              <span class="tech-num">03</span>
+              <h4>Action Painting</h4>
+              <p>Pintura como performance — o movimento corporal completo do artista fica registrado na obra.</p>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-card-img">
+              <img src="assets/color-field.png" alt="Color Field" />
+            </div>
+            <div class="tech-card-body">
+              <span class="tech-num">04</span>
+              <h4>Color Field</h4>
+              <p>Grandes campos de cor lisa e homogênea que induzem estados contemplativos no espectador.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 6: ARTISTAS EXPRESSIONISMO -->
+    <section class="slide slide-artists-abstract" data-index="5">
+      <div class="slide-layout-full">
+        <div class="slide-tag">06</div>
+        <h2 class="slide-title">Artistas do Abstracionismo Americano</h2>
+        <div class="artists-row">
+          <div class="artist-card">
+            <div class="artist-img-wrap">
+              <img src="assets/artista/JacksonPollock.png"
+                   alt="Jackson Pollock" onerror="this.src='https://placehold.co/180x180/2a1a0e/d4a853?text=Pollock'" />
+            </div>
+            <h3>Jackson Pollock</h3>
+            <span class="artist-years">1912 – 1956</span>
+            <p>Pioneiro do action painting, famoso pela técnica do dripping. Suas obras romperam definitivamente com a pintura de cavalete.</p>
+            <div class="artist-tag">Action Painting</div>
+          </div>
+          <div class="artist-card">
+            <div class="artist-img-wrap">
+              <img src="assets/artista/MarkRothko.jpg"
+                   alt="Mark Rothko" onerror="this.src='https://placehold.co/180x180/2a1a0e/d4a853?text=Rothko'" />
+            </div>
+            <h3>Mark Rothko</h3>
+            <span class="artist-years">1903 – 1970</span>
+            <p>Mestre do Color Field, criou composições com grandes blocos de cor que evocam profundidade emocional e espiritualidade.</p>
+            <div class="artist-tag">Color Field</div>
+          </div>
+          <div class="artist-card">
+            <div class="artist-img-wrap">
+              <img src="assets/artista/WillemDeKooning.png"
+                   alt="Willem de Kooning" onerror="this.src='https://placehold.co/180x180/2a1a0e/d4a853?text=De+Kooning'" />
+            </div>
+            <h3>Willem de Kooning</h3>
+            <span class="artist-years">1904 – 1997</span>
+            <p>Misturou abstração e figuração em pinceladas violentas e sensuais. Sua série <em>Woman</em> é das mais controversas da época.</p>
+            <div class="artist-tag">Gestualismo</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 7: OBRAS EXPRESSIONISMO -->
+    <section class="slide slide-works-abstract" data-index="6">
+      <div class="slide-layout-full">
+        <div class="slide-tag">07</div>
+        <h2 class="slide-title">Obras Famosas — Abstracionismo Americano</h2>
+        <div class="works-row">
+          <div class="work-card">
+            <div class="work-img-wrap">
+              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/No._5%2C_1948.jpg/600px-No._5%2C_1948.jpg"
+                   alt="Number 1A - Pollock" onerror="this.src='https://placehold.co/280x200/1a1a2e/e8c97e?text=Number+1A'" />
+            </div>
+            <div class="work-info">
+              <h4>Number 1A</h4>
+              <span>Jackson Pollock · 1948</span>
+              <p>Ícone do dripping, com tinta despejada em movimentos gestuais amplos sobre tela estendida no chão.</p>
+            </div>
+          </div>
+          <div class="work-card">
+            <div class="work-img-wrap">
+              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Orange-Yellow-Rothko.jpg/500px-Orange-Yellow-Rothko.jpg"
+                   alt="Orange and Yellow - Rothko" onerror="this.src='https://placehold.co/280x200/1a1a2e/e8c97e?text=Orange+and+Yellow'" />
+            </div>
+            <div class="work-info">
+              <h4>Orange and Yellow</h4>
+              <span>Mark Rothko · 1956</span>
+              <p>Dois campos de cor vibrantes que se dissolvem nas bordas, criando uma experiência quase meditativa.</p>
+            </div>
+          </div>
+          <div class="work-card">
+            <div class="work-img-wrap">
+              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/Woman_I.jpg/400px-Woman_I.jpg"
+                   alt="Woman I - De Kooning" onerror="this.src='https://placehold.co/280x200/1a1a2e/e8c97e?text=Woman+I'" />
+            </div>
+            <div class="work-info">
+              <h4>Woman I</h4>
+              <span>De Kooning · 1950–52</span>
+              <p>Figura feminina fragmentada em pinceladas violentas, mistura de abstração e figuração provocadora.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 8: CARACTERÍSTICAS POP ART -->
+    <section class="slide slide-pop-features" data-index="7">
+      <div class="pop-dots-bg"></div>
+      <div class="slide-layout-card">
+        <div class="slide-tag dark">08</div>
+        <h2 class="slide-title dark">Características da Pop Art</h2>
+        <div class="cards-grid pop-grid">
+          <div class="pop-feat-card">
+            <h4>Mídia de Massa</h4>
+            <p>TV, revistas e jornais como fonte de inspiração visual</p>
+          </div>
+          <div class="pop-feat-card">
+            <h4>Quadrinhos</h4>
+            <p>Estética dos comics com balões de fala e Ben-Day dots</p>
+          </div>
+          <div class="pop-feat-card">
+            <h4>Produtos Famosos</h4>
+            <p>Marcas e embalagens elevadas ao status de obra de arte</p>
+          </div>
+          <div class="pop-feat-card">
+            <h4>Cores Fortes</h4>
+            <p>Paleta saturada, primária e altamente contrastante</p>
+          </div>
+          <div class="pop-feat-card">
+            <h4>Repetição</h4>
+            <p>Imagens serializadas que evocam produção industrial</p>
+          </div>
+          <div class="pop-feat-card">
+            <h4>Ironia</h4>
+            <p>Crítica velada ao consumismo e à superficialidade da cultura pop</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 9: ARTISTAS POP ART -->
+    <section class="slide slide-artists-pop" data-index="8">
+      <div class="pop-stripe-bg"></div>
+      <div class="slide-layout-full">
+        <div class="slide-tag dark">09</div>
+        <h2 class="slide-title dark">Artistas da Pop Art</h2>
+        <div class="artists-row pop-artists">
+          <div class="artist-card pop-card">
+            <div class="artist-img-wrap pop-img">
+              <img src="assets/artista/andy-warhol.png"
+                   alt="Andy Warhol" onerror="this.src='https://placehold.co/200x200/ff0066/ffffff?text=Warhol'" />
+            </div>
+            <h3>Andy Warhol</h3>
+            <span class="artist-years">1928 – 1987</span>
+            <p>O papa da Pop Art. Transformou celebridades e produtos cotidianos em ícones visuais repetidos em série. Fundou a "Factory", seu estúdio em Nova York.</p>
+            <div class="artist-tag pop-tag">LATAS CAMPBELL • MARILYN</div>
+          </div>
+          <div class="artist-card pop-card">
+            <div class="artist-img-wrap pop-img">
+              <img src="assets/artista/roy-lichtenstein.png"
+                   alt="Roy Lichtenstein" onerror="this.src='https://placehold.co/200x200/0066ff/ffffff?text=Lichtenstein'" />
+            </div>
+            <h3>Roy Lichtenstein</h3>
+            <span class="artist-years">1923 – 1997</span>
+            <p>Elevou a estética dos quadrinhos à alta arte. Seus Ben-Day dots em escala monumental e narrativas dramáticas são inconfundíveis.</p>
+            <div class="artist-tag pop-tag">QUADRINHOS • PONTOS BEN-DAY</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 10: OBRAS POP ART -->
+    <section class="slide slide-works-pop" data-index="9">
+      <div class="pop-checker-bg"></div>
+      <div class="slide-layout-full">
+        <div class="slide-tag dark">10</div>
+        <h2 class="slide-title dark">Obras Famosas — Pop Art</h2>
+        <div class="works-row pop-works">
+          <div class="work-card pop-work">
+            <div class="work-img-wrap">
+              <img src="assets/obras/marilyn.png"
+                   alt="Marilyn Diptych" onerror="this.src='https://placehold.co/260x190/ff0066/ffffff?text=Marilyn+Diptych'" />
+            </div>
+            <div class="work-info">
+              <h4>Marilyn Diptych</h4>
+              <span>Andy Warhol · 1962</span>
+              <p>Marilyn Monroe repetida em cores vibrantes e tons monocromáticos, comentando fama, morte e consumo cultural.</p>
+            </div>
+          </div>
+          <div class="work-card pop-work">
+            <div class="work-img-wrap">
+              <img src="assets/obras/campbells.png"
+                   alt="Campbell's Soup Cans" onerror="this.src='https://placehold.co/260x190/ff0066/ffffff?text=Campbells+Soup'" />
+            </div>
+            <div class="work-info">
+              <h4>Campbell's Soup Cans</h4>
+              <span>Andy Warhol · 1962</span>
+              <p>32 latas de sopa idênticas em série — questiona o que é arte e o que é produto numa sociedade de consumo.</p>
+            </div>
+          </div>
+          <div class="work-card pop-work">
+            <div class="work-img-wrap">
+              <img src="assets/obras/whaam.png"
+                   alt="Whaam!" onerror="this.src='https://placehold.co/260x190/0033cc/ffffff?text=Whaam!'" />
+            </div>
+            <div class="work-info">
+              <h4>Whaam!</h4>
+              <span>Roy Lichtenstein · 1963</span>
+              <p>Cena bélica de quadrinhos ampliada em escala monumental. Crítica à glorificação da guerra na cultura popular.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 11: INFLUÊNCIA ATUAL -->
+    <section class="slide slide-influence" data-index="10">
+      <div class="slide-layout-split">
+        <div class="split-left influence-left">
+          <div class="slide-tag">11</div>
+          <h2 class="slide-title">Influência Atual<br/>da Pop Art</h2>
+          <p class="slide-intro">A estética pop sobreviveu décadas e permeia o mundo visual contemporâneo.</p>
+          <div class="influence-visual">
+            <div class="halftone-art"></div>
+          </div>
+        </div>
+        <div class="split-right influence-right">
+          <div class="influence-grid">
+            <div class="infl-item">
+              <div class="infl-img infl-img-moda">
+                <img src="assets/icons/moda.png" alt="Moda" />
+              </div>
+              <div>
+                <h4>Moda</h4>
+                <p>Coleções de Versace, Moschino e streetwear carregam estética pop diretamente nas passarelas</p>
+              </div>
+            </div>
+            <div class="infl-item">
+              <div class="infl-img infl-img-album">
+                <img src="assets/icons/album.png" alt="Capas de Álbuns" />
+              </div>
+              <div>
+                <h4>Capas de Álbuns</h4>
+                <p>De David Bowie a Billie Eilish, a linguagem visual pop é marca registrada da música</p>
+              </div>
+            </div>
+            <div class="infl-item">
+              <div class="infl-img infl-img-redes">
+                <img src="assets/icons/redesocial.png" alt="Redes Sociais" />
+              </div>
+              <div>
+                <h4>Redes Sociais</h4>
+                <p>Filtros, thumbnails e a cultura do viral herdam a repetição e saturação do pop</p>
+              </div>
+            </div>
+            <div class="infl-item">
+              <div class="infl-img infl-img-meme">
+                <img src="assets/icons/meme.png" alt="Memes" />
+              </div>
+              <div>
+                <h4>Memes</h4>
+                <p>A lógica de serialização e ressignificação de imagens é essencialmente pop</p>
+              </div>
+            </div>
+            <div class="infl-item">
+              <div class="infl-img infl-img-design">
+                <img src="assets/icons/design.png" alt="Design Digital" />
+              </div>
+              <div>
+                <h4>Design Digital</h4>
+                <p>UI, ilustrações e branding contemporâneo usam cores vibrantes e composições ousadas</p>
+              </div>
+            </div>
+            <div class="infl-item">
+              <div class="infl-img infl-img-publi">
+                <img src="assets/icons/publicidade.png" alt="Publicidade" />
+              </div>
+              <div>
+                <h4>Publicidade</h4>
+                <p>Campanhas como as da Apple e Nike herdam a clareza e impacto visual da Pop Art</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 12: CONCLUSÃO -->
+    <section class="slide slide-conclusion" data-index="11">
+      <div class="conclusion-bg">
+        <div class="concl-abstract-side"></div>
+        <div class="concl-pop-side"></div>
+      </div>
+      <div class="conclusion-content">
+        <div class="slide-tag">12</div>
+        <h2 class="slide-title">Conclusão</h2>
+        <div class="conclusion-body">
+          <div class="concl-block abstract-concl">
+            <h3>Abstracionismo Americano</h3>
+            <p>Redefiniu a pintura como ato de liberdade radical e expressão do inconsciente. Colocou Nova York no centro do mundo da arte e abriu caminho para toda a arte contemporânea abstrata.</p>
+          </div>
+          <div class="concl-vs">vs</div>
+          <div class="concl-block pop-concl">
+            <h3>Pop Art</h3>
+            <p>Demoliu a hierarquia entre alta cultura e cultura de massa. Tornou a arte acessível, crítica e irônica — e sua influência domina o visual contemporâneo até hoje.</p>
+          </div>
+        </div>
+        <div class="conclusion-footer">
+          <p>Ambos os movimentos, apesar das diferenças radicais de estética e intenção, <strong>transformaram permanentemente a arte moderna</strong> — e continuam relevantes no século XXI.</p>
+        </div>
+        <div class="final-credit">Obrigado(a) pela atenção</div>
+      </div>
+    </section>
+
+  </div><!-- /slides-container -->
+
+  <!-- DOT NAVIGATION -->
+  <div class="dot-nav" id="dotNav"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
