@@ -995,25 +995,156 @@ html, body {
 }
 
 /* ─────────────────────────────────────────── */
-/* RESPONSIVE                                  */
+/* RESPONSIVE — TABLET & SMALL NOTEBOOK       */
 /* ─────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .slide-layout-full { padding: 36px 32px; }
+  .slide-layout-card { padding: 32px 32px; }
+
+  .split-left { width: 40%; padding: 40px 28px; }
+  .split-right { width: 60%; padding: 40px 32px; }
+
+  .artist-img-wrap { width: 160px; height: 160px; }
+  .pop-img { width: 160px !important; height: 160px !important; }
+
+  .tech-card-img { width: 140px; height: 100px; }
+
+  .artist-card h3 { font-size: 1.3rem; }
+  .artist-card p { font-size: 0.95rem; }
+}
+
 @media (max-width: 900px) {
   .slide-layout-split { flex-direction: column; }
   .split-left, .split-right { width: 100%; border: none; padding: 28px 24px; }
   .split-left { padding-bottom: 0; }
-  .cards-grid { grid-template-columns: repeat(2, 1fr); }
+  .split-left { min-height: auto; }
+
+  .cards-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .artists-row, .works-row { flex-direction: column; }
-  .compare-table { font-size: 0.7rem; }
+  
+  .compare-table { font-size: 0.75rem; }
+  .compare-table tbody td { padding: 12px 14px; }
+  
   .title-line-1, .title-line-2, .title-line-3 { font-size: clamp(2rem, 9vw, 4rem); }
+  
   .conclusion-body { flex-direction: column; }
   .concl-vs { display: none; }
-  .slide-layout-full { padding: 36px 28px; }
-  .nav-prev { left: 8px; }
-  .nav-next { right: 8px; }
-  .slide-counter { right: 14px; }
+  
+  .slide-layout-full { padding: 28px 24px; }
+  .slide-layout-card { padding: 28px 24px; }
+  
+  .nav-prev { left: 8px; width: 36px; height: 36px; font-size: 14px; }
+  .nav-next { right: 8px; width: 36px; height: 36px; font-size: 14px; }
+  .slide-counter { right: 14px; font-size: 10px; }
+  
+  .slide-title { font-size: clamp(1.6rem, 3.5vw, 2.2rem); }
+  .slide-intro { max-width: 100%; }
+  .slide-tag { font-size: 12px; }
+
+  .tech-grid { grid-template-columns: 1fr; gap: 12px; }
+  .tech-card { padding: 16px; }
+  .tech-card-img { width: 120px; height: 90px; }
+  .tech-card-body h4 { font-size: 1.1rem; }
+  .tech-card-body p { font-size: 0.9rem; }
+
+  .feat-card { padding: 20px 18px; }
+  .feat-card h4 { font-size: 1.3rem; }
+  .feat-card p { font-size: 1rem; }
+
+  .work-img-wrap { height: 200px; }
+
+  .infl-item { padding: 12px; }
+  .infl-img { width: 64px; height: 64px; }
+  .infl-img img { width: 40px; height: 40px; }
+  .infl-item h4 { font-size: 1.1rem; }
+
+  .pop-grid .pop-feat-card { padding: 16px; }
+  .pop-feat-card h4 { font-size: 1.1rem; }
+  .pop-feat-card p { font-size: 0.9rem; }
+
+  .artist-img-wrap { width: 140px; height: 140px; }
+  .pop-img { width: 140px !important; height: 140px !important; }
 }
 
+/* ─────────────────────────────────────────── */
+/* RESPONSIVE — MOBILE                         */
+/* ─────────────────────────────────────────── */
 @media (max-width: 600px) {
   .cards-grid { grid-template-columns: 1fr; }
   .split-left .slide-title { font-size: 1.4rem; }
+  
+  .slide-layout-full { padding: 20px 16px; }
+  .slide-layout-card { padding: 20px 16px; }
+  .slide-layout-split .split-left { padding: 20px 16px; }
+  .slide-layout-split .split-right { padding: 20px 16px; }
+
+  .slide-title { font-size: clamp(1.3rem, 5vw, 1.8rem); margin-bottom: 10px; }
+  .slide-intro { font-size: 0.9rem; }
+  .slide-tag { font-size: 10px; margin-bottom: 8px; }
+
+  .nav-prev { left: 4px; width: 32px; height: 32px; font-size: 12px; }
+  .nav-next { right: 4px; width: 32px; height: 32px; font-size: 12px; }
+  
+  .cover-title { margin-bottom: 16px; }
+  .cover-badge { font-size: 8px; padding: 4px 12px; margin-bottom: 18px; }
+  .cover-subtitle { font-size: 0.8rem; margin-bottom: 20px; }
+  .cover-meta { font-size: 10px; flex-wrap: wrap; }
+  .meta-sep { display: none; }
+
+  .timeline-block { padding: 16px 18px; }
+  .timeline-year { font-size: 22px; }
+  .timeline-block h3 { font-size: 1.1rem; }
+  .timeline-block ul li { font-size: 0.85rem; padding: 3px 0 3px 12px; }
+
+  .compare-table { font-size: 0.65rem; }
+  .compare-table thead th { padding: 10px 8px; font-size: 9px; }
+  .compare-table tbody td { padding: 8px 8px; }
+  .compare-table tbody td:first-child { font-size: 9px; }
+
+  .feat-card { padding: 16px 14px; }
+  .feat-card h4 { font-size: 1.1rem; }
+  .feat-card p { font-size: 0.85rem; }
+
+  .tech-card { flex-direction: column; align-items: stretch; padding: 14px; }
+  .tech-card-img { width: 100%; height: 140px; }
+  .tech-card-body h4 { font-size: 1rem; }
+  .tech-card-body p { font-size: 0.85rem; }
+
+  .artist-img-wrap { width: 110px; height: 110px; }
+  .pop-img { width: 110px !important; height: 110px !important; }
+  .artist-card { padding: 18px 16px; }
+  .artist-card h3 { font-size: 1.2rem; }
+  .artist-card p { font-size: 0.85rem; }
+  .artist-tag { font-size: 10px; padding: 4px 10px; }
+
+  .work-img-wrap { height: 160px; }
+  .work-info { padding: 14px 16px; }
+  .work-info h4 { font-size: 1.1rem; }
+  .work-info span { font-size: 11px; }
+  .work-info p { font-size: 0.85rem; }
+
+  .pop-grid .pop-feat-card { padding: 14px; }
+  .pop-feat-card h4 { font-size: 1rem; }
+  .pop-feat-card p { font-size: 0.85rem; }
+
+  .influence-grid { gap: 10px; }
+  .infl-item { padding: 10px; }
+  .infl-img { width: 48px; height: 48px; }
+  .infl-img img { width: 30px; height: 30px; }
+  .infl-item h4 { font-size: 1rem; }
+  .infl-item p { font-size: 0.8rem; }
+
+  .concl-block { padding: 18px 16px; }
+  .abstract-concl h3 { font-size: 1.2rem; }
+  .abstract-concl p { font-size: 0.9rem; }
+  .pop-concl h3 { font-size: 1.2rem; }
+  .pop-concl p { font-size: 0.9rem; }
+  .conclusion-footer { padding: 16px 18px; font-size: 0.85rem; }
+  
+  .halftone-art { width: 100px; height: 100px; }
+}
+
+
+.slide-layout-full {
+  overflow-y: scroll;
 }
